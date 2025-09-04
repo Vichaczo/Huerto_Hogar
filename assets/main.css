@@ -84,6 +84,14 @@ h1,h2,h3,h4,h5,h6
         color:#666666;
         font-weight:300;
 
+        .hero_content_text{
+            border: 10px solid #256d43;
+            justify-content: center;
+            padding: 120px;
+            color: #c7e6c9;
+            font-size: 20px;
+        }
+
         .hero_content_image{
             display: flex;
             flex-direction: row-reverse;
