@@ -16,8 +16,11 @@ h1,h2,h3,h4,h5,h6
     justify-content: flex-start;
     background-color: white;
     padding: 10px;
-    border-top: 10px solid #256d43;/*verde fuerte rgb(14, 99, 12)*/
+    border: 10px solid #256d43;
+    /*
+    border-top: 10px solid #256d43;
     border-bottom: 10px solid #256d43;
+    */
 
     .nav-links{
         display: flex;
@@ -36,6 +39,65 @@ h1,h2,h3,h4,h5,h6
             border-radius: 20px;
         }
     
+    }    
+}
+
+.hero{
+    background-color: white;
+    background-size: cover;
+    height: 600px;
+
+    .hero_login{
+        background-color: rgb(64, 206, 94);
+        border-right: 10px solid #256d43;
+        border-left: 10px solid #256d43;
+        height: 50px;
+        padding:10px;
+        display:flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        
+        .login_items{
+            display: flex;
+            list-style-type: none;
+            gap: 20px;
+
+            a{
+                display: flex;
+                font-weight: 500;
+                background-color: #c7dacf; /*rgb(183, 207, 184) más claro */
+                color:#000000;
+                border: 5px solid #256d43;
+                padding:5px;
+                border-radius: 15px;
+            }
+
+        }
+
     }
-    
+
+    .hero_content{
+
+        background-color: rgb(20, 87, 34);
+        display:flex;
+        justify-content: flex-end;
+        color:#666666;
+        font-weight:300;
+
+        .hero_content_image{
+            display: flex;
+            flex-direction: row-reverse;
+            padding-right: 20px;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            border: 10px solid #256d43;
+            
+        }
+    }
+}
+
+.farm_image{
+            width: 500px;
+            height: 400px;
+            
 }
