@@ -1,0 +1,41 @@
+
+body
+{
+    background-color: #F7F7F7;
+    font-family:'Montserrat',sans-serif;
+    color: #333333;
+}
+h1,h2,h3,h4,h5,h6
+{
+    font-family: 'Playfair Display', serif;
+    color: #8B4513;
+}
+
+.navbar{
+    display: flex;
+    justify-content: flex-start;
+    background-color: white;
+    padding: 10px;
+    border-top: 10px solid #256d43;/*verde fuerte rgb(14, 99, 12)*/
+    border-bottom: 10px solid #256d43;
+
+    .nav-links{
+        display: flex;
+        align-items: center;
+        list-style-type: none;
+        gap: 10px;
+
+    
+        a{
+            display: flex;
+            font-weight: 1000;
+            background-color: #2E8B57; /*rgb(183, 207, 184) más claro */
+            color:#70360d;
+            border: 5px solid #256d43;
+            padding:20px;
+            border-radius: 20px;
+        }
+    
+    }
+    
+}
