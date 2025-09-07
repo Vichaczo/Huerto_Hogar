@@ -89,7 +89,7 @@ h6 {
 .hero {
     background-color: white;
     background-size: cover;
-    height: 650px;
+    height: 450px;
     width: 100%;
 
     .hero_espaciado {
@@ -109,99 +109,60 @@ h6 {
     }
 
     .hero_content {
-        border-right: 10px solid #256d43;
-        border-left: 10px solid #256d43;
-        border-bottom: 10px solid #256d43;
-        min-height: 550px;
-        display: flex; 
-        flex-direction: row; 
+        display: flex;
+        height: 550px;
 
-        .hero_content_categorias {
+        .hero_content_image {
             border-right: 10px solid #256d43;
-            min-height: 550px;
-            width: 15%;
-            display: flex;
-            flex-direction: column;
-            padding-top: 10px;
-            gap: 10px;
-
+            border-left: 10px solid #256d43;
+            border-bottom: 10px solid #256d43;
+            width: 50%;
+            background-color: white;
         }
 
-        .hero_content_productos {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
-            gap: 20px;
+        .hero_content_detalle {
+            width: 50%;
             padding: 20px;
+            display: flex;
             flex: 1;
+            flex-direction: column;
+            border-right: 10px solid #256d43;
+            border-bottom: 10px solid #256d43;
+            background-color: white;
 
-            .hero_content_productos_cuadro {
-                border: 1px solid #ccc;
-                border-radius: 10px;
-                padding: 10px;
-                background-color: white;
+            .hero_content_detalle_desc {
+                .desc_titulo {
+                    font-size: 25px;
+                    text-align: center;
+                }
+
+                .desc_resto {
+                    font-size: 20px;
+                    justify-content: center;
+                }
+
+            }
+
+            .hero_content_detalle_botones {
                 display: flex;
-                flex-direction: column;
-                justify-content: space-between;
-                height: 300px;
-                transition: 0.3s;
+                justify-content: center;
+                gap: 15px;
+                
 
-                img {
-                    width: 100%;
-                    height: 150px;
-                    object-fit: contain;
-                    margin-bottom: 10px;
-                }
-
-                .producto-nombre {
-                    font-size: 14px;
-                    margin: 5px 0;
-                    flex-grow: 1;
-                    text-align: center;
-                    /* para empujar el precio y botón al final */
-                }
-
-                .producto-precio {
-                    font-weight: bold;
-                    color: #e53935;
-                    margin-bottom: 10px;
-                    text-align: center;
-                }
-
-                .producto-boton {
-                    background-color: #ff9800;
-                    color: white;
+                .detalle_button {
+                    padding: 12px 25px;
+                    border-radius: 8px;
                     border: none;
-                    padding: 10px;
-                    border-radius: 5px;
                     cursor: pointer;
-                    transition: 0.3s;
-                }
-
-                .producto-boton:hover {
-                    background-color: #fb8c00;
+                    font-weight: bold;
+                    font-size: 16px;
+                    color: white;
                 }
 
             }
 
         }
 
-
     }
 
-}
-
-.button_categoria {
-    font-weight: 1000;
-    background-color: rgb(241, 22, 22);
-    color: #ffffff;
-    border: 5px solid #920505;
-    padding: 10px;
-    border-radius: 0px;
-    width: 200px;
-
-}
-
-.button_categoria:hover {
-    background-color: #970000; 
-    color:white;
 }
