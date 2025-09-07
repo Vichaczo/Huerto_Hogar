@@ -2,6 +2,8 @@ body {
     background-color: #F7F7F7;
     font-family: 'Montserrat', sans-serif;
     color: #333333;
+     margin: 0;
+    padding: 0;
 }
 
 h1,
@@ -204,4 +206,64 @@ h6 {
 .button_categoria:hover {
     background-color: #970000; 
     color:white;
+}
+
+.footer {
+    background-color: rgb(64, 206, 94);
+    border-top: 10px solid #256d43;
+    border-left: 10px solid #256d43;
+    border-right: 10px solid #256d43;
+    border-bottom: 10px solid #256d43;
+    padding: 20px;
+    color: #70360d;
+    font-family: 'Montserrat', sans-serif;
+
+    background-image: url("/assets/img/hojas.png");
+    background-repeat: repeat-x;
+    background-size: auto 100%;
+
+    .footer-content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 20px;
+
+        .footer-info h3 {
+            font-family: 'Playfair Display', serif;
+            margin: 0;
+            color: #8B4513;
+        }
+
+    }
+
+    .footer-socials {
+        display: flex;
+        gap: 15px;
+        flex-wrap: wrap;
+
+        a {
+            font-weight: bold;
+            background-color: rgb(245, 140, 54);
+            color: #70360d;
+            border: 3px solid rgb(201, 109, 34);
+            padding: 8px 12px;
+            border-radius: 10px;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+
+        a:hover {
+            background-color: #eb5600;
+            color: white;
+        }
+
+    }
+
+    .footer-bottom {
+        text-align: center;
+        margin-top: 15px;
+        font-size: 14px;
+    }
+
 }

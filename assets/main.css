@@ -1,20 +1,25 @@
-
 /* FALTA HACER FOOTER, este contendra redes sociales y algunos de referencia? Quizas un poco de arte 8 bits?
    FALTA HACER Pagina de productos completa con su buscador etc
 */
-body
-{
+body {
     background-color: #F7F7F7;
-    font-family:'Montserrat',sans-serif;
+    font-family: 'Montserrat', sans-serif;
     color: #333333;
+     margin: 0;
+    padding: 0;
 }
-h1,h2,h3,h4,h5,h6
-{
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     font-family: 'Playfair Display', serif;
     color: #8B4513;
 }
 
-.navbar{
+.navbar {
     display: flex;
     justify-content: flex-start;
     background-color: rgb(20, 87, 34);
@@ -24,97 +29,99 @@ h1,h2,h3,h4,h5,h6
     border-bottom: 10px solid #256d43;
     */
 
-    .Logo{
-    border-right: 10px solid #256d43;
+    .Logo {
+        border-right: 10px solid #256d43;
     }
 
-    .nav-links{
+    .nav-links {
         display: flex;
         align-items: center;
         list-style-type: none;
         gap: 5px;
-        width:90%;
-    
-        a{
+        width: 90%;
+
+        a {
             display: flex;
             font-weight: 1000;
-            background-color: rgb(245, 140, 54); /*rgb(183, 207, 184) más claro */
-            color:#70360d;
+            background-color: rgb(245, 140, 54);
+            /*rgb(183, 207, 184) más claro */
+            color: #70360d;
             border: 5px solid rgb(201, 109, 34);
-            padding:20px;
+            padding: 20px;
             border-radius: 20px;
-            
+
 
         }
 
-        a:hover{
-            background-color: #eb5600; 
-            color:white;
+        a:hover {
+            background-color: #eb5600;
+            color: white;
         }
-    
+
     }
-    
-    .nav-user-links{
-        display:flex;
+
+    .nav-user-links {
+        display: flex;
         align-items: center;
         list-style-type: none;
         gap: 5px;
-        width:40%;
+        width: 40%;
 
-        .nav-user-link{
+        .nav-user-link {
             display: flex;
             font-weight: 1000;
-            background-color: rgb(245, 140, 54); /*rgb(183, 207, 184) más claro */
-            color:#70360d;
+            background-color: rgb(245, 140, 54);
+            /*rgb(183, 207, 184) más claro */
+            color: #70360d;
             border: 5px solid rgb(201, 109, 34);
-            padding:10px;
+            padding: 10px;
             border-radius: 15px;
             text-align: center;
             width: 80px;
-            
+
 
         }
 
-        .nav-user-link:hover{
-            background-color: #eb5600; 
-            color:white;
+        .nav-user-link:hover {
+            background-color: #eb5600;
+            color: white;
         }
 
     }
 
 }
 
-.hero{
+.hero {
     background-color: white;
     background-size: cover;
     height: 475px;
 
-    .hero_espaciado{
+    .hero_espaciado {
         background-color: rgb(64, 206, 94);
         border-right: 10px solid #256d43;
         border-left: 10px solid #256d43;
         height: 25px;
-        padding:10px;
-        display:flex;
+        padding: 10px;
+        display: flex;
         flex-direction: row;
         justify-content: flex-end;
-        
-        background-image: url("/assets/img/hojas.png"); 
-        background-repeat: repeat-x; 
-        background-size: auto 100%; 
+
+        background-image: url("/assets/img/hojas.png");
+        background-repeat: repeat-x;
+        background-size: auto 100%;
     }
 
-    .hero_content{
+    .hero_content {
 
         background-color: rgb(20, 87, 34);
-        display:flex;
+        display: flex;
         justify-content: space-between;
         align-items: center;
-        color:#666666;
-        font-weight:300;
-        
+        color: #666666;
+        font-weight: 300;
 
-        .hero_content_text{
+
+        .hero_content_text {
             flex: 1;
             max-width: 70%;
             border: 10px solid #256d43;
@@ -124,32 +131,32 @@ h1,h2,h3,h4,h5,h6
             font-size: 20px;
         }
 
-        .hero_content_image_slider{
-                position: relative;
-                width: 500px;
-                height: 400px;
-                overflow: hidden;
-                border: 10px solid #256d43;
+        .hero_content_image_slider {
+            position: relative;
+            width: 500px;
+            height: 400px;
+            overflow: hidden;
+            border: 10px solid #256d43;
 
-                .slides {
-                    display: flex;
+            .slides {
+                display: flex;
+                width: 100%;
+                height: 100%;
+                transition: transform 0.5s ease-in-out;
+
+                img {
                     width: 100%;
                     height: 100%;
-                    transition: transform 0.5s ease-in-out;
-
-                    img{
-                        width: 100%;
-                        height: 100%;
-                        object-fit: cover;
-                        flex-shrink: 0;
-                    }
+                    object-fit: cover;
+                    flex-shrink: 0;
                 }
-        
+            }
+
             button {
                 position: absolute;
                 top: 50%;
                 transform: translateY(-50%);
-                background: rgba(0,0,0,0.5);
+                background: rgba(0, 0, 0, 0.5);
                 color: white;
                 border: none;
                 padding: 10px;
@@ -157,6 +164,7 @@ h1,h2,h3,h4,h5,h6
                 font-size: 24px;
                 border-radius: 50%;
             }
+
             button:hover {
                 background: rgba(36, 34, 34, 0.8);
             }
@@ -165,30 +173,93 @@ h1,h2,h3,h4,h5,h6
                 left: 10px;
             }
 
-            .next   {
+            .next {
                 right: 10px;
             }
 
-      }
+        }
 
 
     }
 }
 
-.button_ver_productos{
+.button_ver_productos {
     display: flex;
-            font-weight: 1000;
-            font-size: 14px;
-            background-color: rgb(245, 140, 54); /*rgb(183, 207, 184) más claro  #2E8B57*/
-            color:#70360d;/*#70360d*/
-            border: 5px solid rgb(201, 109, 34);
-            padding:20px;
-            border-radius: 20px;
-            width: 250px;
-            justify-content: center;
-            
+    font-weight: 1000;
+    font-size: 14px;
+    background-color: rgb(245, 140, 54);
+    /*rgb(183, 207, 184) más claro  #2E8B57*/
+    color: #70360d;
+    /*#70360d*/
+    border: 5px solid rgb(201, 109, 34);
+    padding: 20px;
+    border-radius: 20px;
+    width: 250px;
+    justify-content: center;
+
 }
+
 .button_ver_productos:hover {
-    background-color: #eb5600; 
-    color:white;
+    background-color: #eb5600;
+    color: white;
+}
+
+.footer {
+    background-color: rgb(64, 206, 94);
+    border-top: 10px solid #256d43;
+    border-left: 10px solid #256d43;
+    border-right: 10px solid #256d43;
+    border-bottom: 10px solid #256d43;
+    padding: 20px;
+    color: #70360d;
+    font-family: 'Montserrat', sans-serif;
+
+    background-image: url("/assets/img/hojas.png");
+    background-repeat: repeat-x;
+    background-size: auto 100%;
+
+    .footer-content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 20px;
+
+        .footer-info h3 {
+            font-family: 'Playfair Display', serif;
+            margin: 0;
+            color: #8B4513;
+        }
+
+    }
+
+    .footer-socials {
+        display: flex;
+        gap: 15px;
+        flex-wrap: wrap;
+
+        a {
+            font-weight: bold;
+            background-color: rgb(245, 140, 54);
+            color: #70360d;
+            border: 3px solid rgb(201, 109, 34);
+            padding: 8px 12px;
+            border-radius: 10px;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+
+        a:hover {
+            background-color: #eb5600;
+            color: white;
+        }
+
+    }
+
+    .footer-bottom {
+        text-align: center;
+        margin-top: 15px;
+        font-size: 14px;
+    }
+
 }
