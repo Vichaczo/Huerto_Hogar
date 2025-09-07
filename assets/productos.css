@@ -1,0 +1,207 @@
+body {
+    background-color: #F7F7F7;
+    font-family: 'Montserrat', sans-serif;
+    color: #333333;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Playfair Display', serif;
+    color: #8B4513;
+}
+
+.navbar {
+    display: flex;
+    justify-content: flex-start;
+    background-color: rgb(20, 87, 34);
+    border: 10px solid #256d43;
+    /*
+    border-top: 10px solid #256d43;
+    border-bottom: 10px solid #256d43;
+    */
+
+    .Logo {
+        border-right: 10px solid #256d43;
+    }
+
+    .nav-links {
+        display: flex;
+        align-items: center;
+        list-style-type: none;
+        gap: 5px;
+        width: 90%;
+
+        a {
+            display: flex;
+            font-weight: 1000;
+            background-color: rgb(245, 140, 54);
+            /*rgb(183, 207, 184) más claro */
+            color: #70360d;
+            border: 5px solid rgb(201, 109, 34);
+            padding: 20px;
+            border-radius: 20px;
+
+
+        }
+
+        a:hover {
+            background-color: #eb5600;
+            color: white;
+        }
+
+    }
+
+    .nav-user-links {
+        display: flex;
+        align-items: center;
+        list-style-type: none;
+        gap: 5px;
+        width: 40%;
+
+        .nav-user-link {
+            display: flex;
+            font-weight: 1000;
+            background-color: rgb(245, 140, 54);
+            /*rgb(183, 207, 184) más claro */
+            color: #70360d;
+            border: 5px solid rgb(201, 109, 34);
+            padding: 10px;
+            border-radius: 15px;
+            text-align: center;
+            width: 80px;
+
+
+        }
+
+        .nav-user-link:hover {
+            background-color: #eb5600;
+            color: white;
+        }
+
+    }
+
+}
+
+.hero {
+    background-color: white;
+    background-size: cover;
+    height: 650px;
+    width: 100%;
+
+    .hero_espaciado {
+        background-color: rgb(64, 206, 94);
+        border-right: 10px solid #256d43;
+        border-left: 10px solid #256d43;
+        border-bottom: 10px solid #256d43;
+        height: 25px;
+        padding: 10px;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+
+        background-image: url("/assets/img/hojas.png");
+        background-repeat: repeat-x;
+        background-size: auto 100%;
+    }
+
+    .hero_content {
+        border-right: 10px solid #256d43;
+        border-left: 10px solid #256d43;
+        border-bottom: 10px solid #256d43;
+        min-height: 550px;
+        display: flex; /* Add this */
+        flex-direction: row; /* Add this */
+
+        .hero_content_categorias {
+            border-right: 10px solid #256d43;
+            min-height: 550px;
+            width: 15%;
+            display: flex;
+            flex-direction: column;
+            padding-top: 10px;
+            gap: 10px;
+
+        }
+
+        .hero_content_productos {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+            gap: 20px;
+            padding: 20px;
+            flex: 1;
+
+            .hero_content_productos_cuadro {
+                border: 1px solid #ccc;
+                border-radius: 10px;
+                padding: 10px;
+                background-color: white;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                height: 300px;
+                transition: 0.3s;
+
+                img {
+                    width: 100%;
+                    height: 150px;
+                    object-fit: contain;
+                    margin-bottom: 10px;
+                }
+
+                .producto-nombre {
+                    font-size: 14px;
+                    margin: 5px 0;
+                    flex-grow: 1;
+                    text-align: center;
+                    /* para empujar el precio y botón al final */
+                }
+
+                .producto-precio {
+                    font-weight: bold;
+                    color: #e53935;
+                    margin-bottom: 10px;
+                    text-align: center;
+                }
+
+                .producto-boton {
+                    background-color: #ff9800;
+                    color: white;
+                    border: none;
+                    padding: 10px;
+                    border-radius: 5px;
+                    cursor: pointer;
+                    transition: 0.3s;
+                }
+
+                .producto-boton:hover {
+                    background-color: #fb8c00;
+                }
+
+            }
+
+        }
+
+
+    }
+
+}
+
+.button_categoria {
+    font-weight: 1000;
+    background-color: rgb(241, 22, 22);
+    color: #ffffff;
+    border: 5px solid #920505;
+    padding: 10px;
+    border-radius: 0px;
+    width: 200px;
+
+}
+
+.button_categoria:hover {
+    background-color: #970000; 
+    color:white;
+}

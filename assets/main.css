@@ -48,7 +48,7 @@ h1,h2,h3,h4,h5,h6
         }
 
         a:hover{
-            background-color: #7e480b; 
+            background-color: #eb5600; 
             color:white;
         }
     
@@ -76,7 +76,7 @@ h1,h2,h3,h4,h5,h6
         }
 
         .nav-user-link:hover{
-            background-color: #7e480b; 
+            background-color: #eb5600; 
             color:white;
         }
 
@@ -189,6 +189,6 @@ h1,h2,h3,h4,h5,h6
             
 }
 .button_ver_productos:hover {
-    background-color: #7e480b; 
+    background-color: #eb5600; 
     color:white;
 }
