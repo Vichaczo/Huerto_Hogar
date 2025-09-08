@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Iniciar sesión — HuertoHogar</title>
+    <meta name="description" content="Accede a tu cuenta de HuertoHogar para revisar pedidos y direcciones guardadas." />
+
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="assets/main.css" />
+    <link rel="stylesheet" href="assets/autenticacion.css" />
+
+  </head>
+
+  <body>
+
+    <!-- Header reutilizado -->
+    <header class="site-header">
+      <nav class="navbar" aria-label="Principal">
+        <a class="logo" href="index.html" aria-label="HuertoHogar, ir al inicio">
+          <img src="assets/img/Logo_huerto_hogar.png" alt="HuertoHogar" />
+        </a>
+        <ul id="nav-menu" class="nav-links">
+          <li><a class="nav-link" href="index.html">Inicio</a></li>
+          <li><a class="nav-link" href="productos.html">Productos</a></li>
+          <li><a class="nav-link" href="#">Nosotros</a></li>
+          <li><a class="nav-link" href="#">Blog</a></li>
+          <li><a class="nav-link" href="#">Contacto</a></li>
+        </ul>
+        <div class="nav-actions">
+          <ul class="nav-user-links">
+            <button class="cart-btn">🛒 <span class="cart-count">0</span></button>
+            <li><a class="nav-user-link" href="login.html">Iniciar sesión</a></li>
+            <li><a class="nav-user-link" href="sign_up.html">Registrar usuario</a></li>
+        </ul>
+        </div>
+      </nav>
+    </header>
+
+    <main id="main-content" class="auth-page">
+      <section aria-labelledby="login-title" class="auth-wrapper">
+        <h1 id="login-title" style="text-align:center; margin:12px 0 24px">Iniciar sesión</h1>
+
+        <div class="auth-card" role="region" aria-labelledby="login-title">
+          <form id="login-form" novalidate>
+            <div class="field">
+              <label for="email">Correo electrónico</label>
+              <input id="email" name="email" type="email" inputmode="email" autocomplete="email" placeholder="tu@correo.cl" required />
+              <p class="error" id="email-error" aria-live="polite"></p>
+            </div>
+
+            <div class="field">
+              <label for="password">Contraseña</label>
+              <div class="password-wrap">
+                <input id="password" name="password" type="password" autocomplete="current-password" minlength="6" required />
+                <button type="button" class="btn-eye" aria-pressed="false" aria-label="Mostrar u ocultar contraseña">👁</button>
+              </div>
+              <p class="error" id="password-error" aria-live="polite"></p>
+            </div>
+
+            <div class="row-between">
+              <label class="remember">
+                <input type="checkbox" id="remember" name="remember" />
+                <span>Recordarme</span>
+              </label>
+              <a class="link" href="#">¿Olvidaste tu contraseña?</a>
+            </div>
+
+            <button class="btn btn-primary btn-block" type="submit">Ingresar</button>
+
+            <p class="aside">
+              ¿Aún no tienes cuenta? <a class="link" href="sign_up.html">Regístrate aquí</a>
+            </p>
+
+            <div id="login-feedback" class="toast" role="status" aria-live="polite" aria-atomic="true"></div>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-content">
+        <div class="footer-info">
+          <h3>HuertoHogar</h3>
+          <p>🌱 Cultivando lo natural desde tu hogar</p>
+        </div>
+        <div class="footer-socials" aria-label="Redes sociales">
+          <a href="#">Facebook</a>
+          <a href="#">Instagram</a>
+          <a href="#">Twitter</a>
+          <a href="#">YouTube</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2025 HuertoHogar. Todos los derechos reservados.</p>
+      </div>
+    </footer>
+
+
+
+    <script src="assets/main.js" defer></script>
+
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        const form = document.getElementById('login-form');
+        const email = document.getElementById('email');
+        const password = document.getElementById('password');
+        const emailErr = document.getElementById('email-error');
+        const passErr = document.getElementById('password-error');
+        const remember = document.getElementById('remember');
+        const toast = document.getElementById('login-feedback');
+        const eye = document.querySelector('.btn-eye');
+
+        // ojo para mostrar/ocultar contraseña
+        if (eye) {
+          eye.addEventListener('click', () => {
+            const visible = password.type === 'text';
+            password.type = visible ? 'password' : 'text';
+            eye.setAttribute('aria-pressed', String(!visible));
+          });
+        }
+
+        
+
+      });
+    </script>
+  </body>
+</html>

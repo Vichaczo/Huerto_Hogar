@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Crear cuenta — HuertoHogar</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="assets/main.css" />
+    <link rel="stylesheet" href="assets/autenticacion.css" />
+  </head>
+
+  <body>
+    <!-- Header -->
+    <header class="site-header">
+      <nav class="navbar" aria-label="Principal">
+        <a class="logo" href="index.html">
+          <img src="assets/img/Logo_huerto_hogar.png" alt="HuertoHogar" />
+        </a>
+        <ul id="nav-menu" class="nav-links">
+          <li><a class="nav-link" href="index.html">Inicio</a></li>
+          <li><a class="nav-link" href="productos.html">Productos</a></li>
+          <li><a class="nav-link" href="#">Nosotros</a></li>
+          <li><a class="nav-link" href="#">Blog</a></li>
+          <li><a class="nav-link" href="#">Contacto</a></li>
+        </ul>
+        <div class="nav-actions">
+          <ul class="nav-user-links">
+            <button class="cart-btn">🛒 <span class="cart-count">0</span></button>
+            <li><a class="nav-user-link" href="login.html">Iniciar sesión</a></li>
+            <li><a class="nav-user-link" href="sign_up.html">Registrar usuario</a></li>
+        </ul>
+        </div>
+      </nav>
+    </header>
+
+    <main id="main-content" class="auth-page auth-page--signup">
+      <section class="auth-wrapper" aria-labelledby="signup-title">
+        <h1 id="signup-title">Crear cuenta</h1>
+
+        <div class="auth-card">
+          <form id="signup-form" novalidate>
+            <div class="field">
+              <label for="name">Nombre completo</label>
+              <input id="name" name="name" type="text" required />
+              <p class="error" id="name-error"></p>
+            </div>
+
+            <div class="field">
+              <label for="email">Correo electrónico</label>
+              <input id="email" name="email" type="email" autocomplete="email" required />
+              <p class="error" id="email-error"></p>
+            </div>
+
+            <div class="field">
+              <label for="password">Contraseña</label>
+              <input id="password" name="password" type="password" minlength="6" required />
+              <p class="error" id="password-error"></p>
+            </div>
+
+            <div class="field">
+              <label for="confirm">Confirmar contraseña</label>
+              <input id="confirm" name="confirm" type="password" minlength="6" required />
+              <p class="error" id="confirm-error"></p>
+            </div>
+
+            <div class="field">
+              <label for="phone">Teléfono</label>
+              <input id="phone" name="phone" type="tel" pattern="^[0-9]{8,12}$" placeholder="Ej: 912345678" required />
+              <p class="error" id="phone-error"></p>
+            </div>
+
+            <div class="field">
+              <label for="region">Región</label>
+              <select id="region" name="region" required>
+                <option value="">Selecciona tu región</option>
+                <option value="rm">Metropolitana</option>
+                <option value="valpo">Valparaíso</option>
+                <option value="biobio">Biobío</option>
+                <option value="araucania">Araucanía</option>
+                <option value="los-lagos">Los Lagos</option>
+                <option value="otra">Otra</option>
+              </select>
+              <p class="error" id="region-error"></p>
+            </div>
+
+            <div class="field inline">
+              <input type="checkbox" id="terms" required />
+              <label for="terms">Acepto los <a href="#">términos y condiciones</a></label>
+              <p class="error" id="terms-error"></p>
+            </div>
+
+            <button class="btn btn-primary btn-block" type="submit">Registrarse</button>
+            <p class="aside">¿Ya tienes cuenta? <a class="link" href="login.html">Inicia sesión aquí</a></p>
+
+            <div id="signup-feedback" class="toast" role="status" aria-live="polite"></div>
+          </form>
+        </div>
+      </section>
+    </main>
+
+   
+    <footer class="footer">
+      <div class="footer-content">
+        <div class="footer-info">
+          <h3>HuertoHogar</h3>
+          <p>🌱 Cultivando lo natural desde tu hogar</p>
+        </div>
+        <div class="footer-socials">
+          <a href="#">Facebook</a>
+          <a href="#">Instagram</a>
+          <a href="#">Twitter</a>
+          <a href="#">YouTube</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2025 HuertoHogar. Todos los derechos reservados.</p>
+      </div>
+    </footer>
+
+    <script src="assets/main.js" defer></script>
+
+    <!--logica para despues... -->
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        const form = document.getElementById('signup-form');
+        const toast = document.getElementById('signup-feedback');
+
+        function showToast(msg){ toast.textContent = msg; toast.classList.add('is-visible'); setTimeout(()=>toast.classList.remove('is-visible'), 2500); }
+
+        form.addEventListener('submit', (e) => {
+          e.preventDefault();
+          document.querySelectorAll('.error').forEach(el => el.textContent = '');
+
+          const name = form.name.value.trim();
+          const email = form.email.value.trim();
+          const pass = form.password.value;
+          const confirm = form.confirm.value;
+          const phone = form.phone.value.trim();
+          const region = form.region.value;
+          const terms = document.getElementById('terms').checked;
+
+          let ok = true;
+          if (name.length < 3) { document.getElementById('name-error').textContent = 'Ingresa tu nombre completo.'; ok = false; }
+          if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) { document.getElementById('email-error').textContent = 'Correo inválido.'; ok = false; }
+          if (pass.length < 6) { document.getElementById('password-error').textContent = 'Mínimo 6 caracteres.'; ok = false; }
+          if (pass !== confirm) { document.getElementById('confirm-error').textContent = 'Las contraseñas no coinciden.'; ok = false; }
+          if (!/^\d{8,12}$/.test(phone)) { document.getElementById('phone-error').textContent = 'Teléfono inválido.'; ok = false; }
+          if (!region) { document.getElementById('region-error').textContent = 'Selecciona una región.'; ok = false; }
+          if (!terms) { document.getElementById('terms-error').textContent = 'Debes aceptar los términos.'; ok = false; }
+
+          if (!ok) return;
+
+          localStorage.setItem('hh_user', JSON.stringify({ name, email, phone, region }));
+          localStorage.setItem('hh_is_logged','true');
+          showToast('Registro exitoso 🎉');
+          setTimeout(()=>window.location.href='productos.html',1200);
+        });
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,133 @@
+
+
+.auth-card {
+  max-width: 520px;
+  margin: 0 auto;
+  background: #fff;
+  border: 10px solid var(--hh-primary-2);
+  box-shadow: var(--shadow-md);
+  border-radius: var(--radius-md);
+  padding: 24px;
+}
+
+.field {
+  margin-bottom: 16px;
+}
+
+.field label {
+  display: block;
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+
+.field input,
+.field select {
+  width: 100%;
+  height: 44px;
+  padding: 10px 12px;
+  border: 2px solid #d9d9d9;
+  border-radius: 12px;
+  font: inherit;
+}
+
+.field input:focus-visible,
+.field select:focus-visible {
+  outline: 3px solid #000;
+  outline-offset: 2px;
+  border-color: #000;
+}
+
+.btn-block {
+  width: 100%;
+}
+
+.error {
+  min-height: 18px;
+  margin: 6px 0 0;
+  color: #b00020;
+  font-size: 0.9rem;
+}
+
+.aside {
+  text-align: center;
+  margin-top: 12px;
+}
+
+.toast {
+  position: fixed;
+  left: 50%;
+  bottom: 24px;
+  transform: translateX(-50%);
+  background: var(--hh-accent);
+  color: #24c961;
+  border: 3px solid var(--hh-accent-2);
+  border-radius: 10px;
+  padding: 10px 14px;
+  box-shadow: var(--shadow-sm);
+  display: none;
+}
+
+.toast.is-visible {
+  display: block;
+}
+
+
+/*para la pagina de autenticacion*/
+.auth-page{
+  position: relative;
+  min-height: calc(100vh - 120px);
+  display: grid;
+  place-items: center;
+  padding: 24px 16px;
+  overflow: hidden;
+}
+
+/* Fondo  */
+.auth-page::before{
+  content: "";
+  position: absolute;  
+  inset: 0;
+  background:
+    linear-gradient(0deg, rgba(0,0,0,.25), rgba(0,0,0,.25)),
+    url("img/huerto_background.jpg") center / cover no-repeat;
+  filter: blur(6px) brightness(.95);
+  z-index: 0;    
+}
+
+
+.auth-wrapper,
+.auth-card{
+  position: relative;
+  z-index: 1;
+}
+
+
+.auth-card{
+  max-width: 520px;
+  background: rgba(255,255,255,.96);
+  border: 10px solid var(--hh-primary-2);
+  box-shadow: var(--shadow-md);
+  border-radius: var(--radius-md);
+  padding: 70px;
+}
+
+#login-title{
+  margin: 8px 0 12px;
+  text-align: center;
+}
+
+
+.field input{
+  width: 100%;
+  max-width: 100%;  
+}
+
+
+.btn-block{
+  width: 100%;
+}
+
+
+@media (max-width: 420px){
+  .auth-card{ padding: 18px; border-width: 8px; }
+}
